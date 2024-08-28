@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami</title>
+</head>
+<!-- css utk header n footer -->
+<link rel="stylesheet" href="css/style.css">
+<!-- box icons -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMARE+L/E5FEvStPhvHecX3EmPtOg4bX43/QX0y" crossorigin="anonymous">
+
+<style> 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', serif;
+    color: var(--color-black);
+    background: white;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.heading,
+.sub-heading {
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.heading {
+    font-size: 2.5rem;
+}
+
+.sub-heading {
+    text-align: left;
+}
+
+.contactForm {
+    display: grid;
+    gap: 3em;
+}
+
+form {
+    width: 100%;
+    margin-top: 3em;
+}
+
+.input {
+    margin-top: 0.5rem;
+    width: 95%;
+    max-width: 700px;
+    border: none;
+    font-size: .9rem;
+    padding: 1em;
+    outline: none;
+    background-color: var(--formBg);
+    color: var(--paraColor);
+    border-radius: 10px;
+    border: 1px solid var(--color-primary);
+    margin-bottom: 1em;
+}
+
+.input:focus {
+    border: 1px solid var(--color-primary);
+}
+
+.input::placeholder {
+    text-transform: capitalize;
+}
+
+.submit {
+    background: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+.map-container {
+    margin-top: 3rem;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-left: 5%;
+}
+
+.map-container h2 {
+    text-align: left;
+}
+
+.map {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.contactMethod {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    text-align: left;
+    margin-bottom: 2.5rem;
+}
+
+.method {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contactIcon {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    width: 70px;
+}
+
+/* Definisi animasi fadeInUp yang lebih halus */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Awal animasi dari posisi lebih rendah */
+    }
+    60% {
+        opacity: 0.7; /* Menambah opacity secara bertahap */
+        transform: translateY(-10px); /* Posisi lebih tinggi sebelum mencapai akhir */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Posisi akhir pada tempat semula */
+    }
+}
+
+/* Menambahkan animasi ke elemen */
+section,
+.contactForm,
+form,
+.input,
+.submit,
+.map-container,
+.map,
+.contactMethod,
+.method,
+.contactIcon {
+    animation: fadeInUp 1s ease-out; /* Durasi animasi 1 detik dengan easing halus */
+    animation-fill-mode: both; /* Memastikan animasi tetap pada status akhir setelah selesai */
+}
+
+/* Delay animasi untuk elemen tertentu */
+section {
+    animation-delay: 0s; /* Tanpa delay */
+}
+
+.contactForm {
+    animation-delay: 0.2s;
+}
+
+form {
+    animation-delay: 0.4s;
+}
+
+.input {
+    animation-delay: 0.6s;
+}
+
+.submit {
+    animation-delay: 0.8s;
+}
+
+.map-container {
+    animation-delay: 1s;
+}
+
+.map {
+    animation-delay: 1.2s;
+}
+
+.contactMethod {
+    animation-delay: 1.4s;
+}
+
+.method {
+    animation-delay: 1.6s;
+}
+
+.contactIcon {
+    animation-delay: 1.8s;
+}
+
+
+@media screen and (min-width:800px) {
+    section{
+        max-width: 1100px;
+    }
+    
+    .contactForm{
+        grid-template-columns: 1fr 1fr;
+    }   
+
+    .contactMethod{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Untuk layar kecil seperti smartphone */
+@media (max-width: 768px) {
+    section {
+        max-width: 90%;
+        margin-top: 5rem;
+    }
+
+    .heading {
+        font-size: 1.8rem;
+    }
+
+    .sub-heading {
+        font-size: 1.2rem;
+    }
+
+    .contactForm {
+        gap: 2em;
+    }
+
+    .input {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+
+    .submit {
+        font-size: 0.8rem;
+        padding: 10px 0;
+    }
+
+    .map-container {
+        height: 300px; /* Menyesuaikan tinggi peta untuk layar kecil */
+    }
+}
+
+/* Untuk layar tablet */
+@media (max-width: 1024px) {
+    section {
+        max-width: 80%;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    .sub-heading {
+        font-size: 1.4rem;
+    }
+
+    .input {
+        font-size: 0.85rem;
+    }
+
+    .submit {
+        font-size: 0.85rem;
+        padding: 12px 0;
+    }
+
+    .map-container {
+        height: 400px; /* Menyesuaikan tinggi peta untuk tablet */
+    }
+}
+</style>
+<body>
+    <!-- header -->
+    <header>
+        <div class="container header-container">
+            <!-- menu icon -->
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <!-- logo -->
+            <a href="" class="logo"><h3>Trilingga <span>Trans</span></h3></a>
+            <!-- nav link -->
+            <ul class="nav-link">
+                <li><a href="/home.html">Beranda</a></li>
+                <li>
+                    <a href="/sewamobil.html">Sewa Mobil</a>
+                    <i class='bx bx-chevron-down chevron-icon'></i>
+                    <div class="dropdown-content">
+                        <a href="/avanza.html">Avanza</a>
+                        <a href="/innova.html">Innova</a>
+                        <a href="/fortuner.html">Fortuner</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="/paketwisata.html">Paket Wisata</a>
+                    <i class='bx bx-chevron-down chevron-icon'></i>
+                    <div class="dropdown-content">
+                        <a href="/bromo.html">Bromo</a>
+                        <a href="/bali.html">Bali</a>
+                    </div>
+                </li>
+                <li><a href="/tentangkami.html">Tentang Kami</a></li>
+                <li><a href="/hubungikami.html" class="active">Hubungi Kami</a></li>
+            </ul>
+            <ul class="social-link">
+                <li><a href="" style="--i:1;"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="" style="--i:2;"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="" style="--i:3;"><i class="fab fa-instagram"></i></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- end of header -->
+    
+   <!-- hubungi kami --> 
+   <section class="contact-form">
+    <h1 class="heading">Hubungi Kami</h1>
+    <p>Butuh bantuan atau memiliki pertanyaan? Hubungi kami, kami akan dengan senang hati membantu Anda.</p>
+    
+    <div class="contactForm">
+        <form action="https://api.web3forms.com/submit" method="POST" onsubmit="clearForm()">
+         <h1 class="sub-heading">Tinggalkan pesan</h1>
+         <input type="hidden" name="access_key" value="25f6e631-141d-499e-9a1e-b9ef6c9c0da2">
+         <input type="text" class="input" name="name" placeholder="Name" required>
+         <input type="email" class="input" name="email" placeholder="Email" required>
+         <input type="text" class="input" name="subject" placeholder="Subject" required>
+         <textarea class="input" name="message" cols="30" rows="5" placeholder="Your Message..." required></textarea>
+         <input type="submit" class="input submit" value="Send Message" style="color: white;">
+        </form>
+
+        <script>
+            function clearForm() {
+                // Prevent form submission default behavior
+                event.preventDefault();
+
+                // Clear form fields
+                document.querySelector('input[name="name"]').value = '';
+                document.querySelector('input[name="email"]').value = '';
+                document.querySelector('input[name="subject"]').value = '';
+                document.querySelector('textarea[name="message"]').value = '';
+            }
+        </script>
+
+        <div class="map-container">
+            <h2>Temukan Kami</h2>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15803.99805055998!2d112.66068843393693!3d-7.998985640910117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd628ee2e702f05%3A0x166460d3a2a25cb9!2sBiznizo!5e0!3m2!1sid!2sid!4v1724770479925!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+        </div>
+    </div>
+
+    <div class="contactMethod">
+        <div class="method">
+            <i class='bx bxs-map contactIcon' style='color:#1743e3'  ></i>
+            <article class="text">
+                <h1 class="sub-heading">Location</h1>
+                <p class="para">2276 Lynn Ogden Lane Beaumont</p>
+            </article>
+        </div>
+
+        <div class="method">
+            <i class='bx bxs-envelope contactIcon' style='color:#1743e3' ></i>
+            <article class="text">
+                <h1 class="sub-heading">Email</h1>
+                <p class="para">trilinggatrans@gmail.com</p>
+            </article>
+        </div>
+
+        <div class="method">
+            <i class='bx bxs-phone contactIcon' style='color:#1743e3' ></i>
+            <article class="text">
+                <h1 class="sub-heading">Phone</h1>
+                <p class="para">0123-4567-8901</p>
+            </article>
+        </div>
+    </div>
+   </section>
+
+   <!-- footer -->
+   <div class="footer">
+    <div class="footer-content">
+        <div class="footer-sections">
+            <div class="footer-section about">
+                <div class="aboutus-content">
+                    <a href="" class="logo-a"><h3>Tentang Kami</h3></a>
+                    <!-- <img src="images/logo.png" alt="Trilangga Trans Logo"> -->
+                    <p>Trilangga Trans adalah pilihan terbaik untuk kebutuhan rental mobil dan perjalanan wisata Anda.</p>
+                    <div class="social-icons">
+                        <div class="icons-grid">
+                            <a href="https://www.instagram.com/lopipupozcv?igsh=MWg4eXk4ajlqeG91eQ=="><i class='bx bxl-instagram'></i></a>
+                            <a href="#"><i class='bx bxl-facebook'></i></a>
+                            <a href="#"><i class='bx bxl-twitter'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section quick-links">
+                <h2><strong>Quick Links</strong></h2>
+                <ul class="footer-links">
+                    <li><a href="/home.html">Beranda</a></li>
+                    <li><a href="/tentangkami.html">Tentang Kami</a></li>
+                    <li><a href="/hubungikami.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <div class="footer-section sewa-links">
+                <h2><strong>Sewa Mobil</strong></h2>
+                <ul class="footer-links">
+                    <li><a href="/avanza.html">Avanza</a></li>
+                    <li><a href="/innova.html">Innova</a></li>
+                    <li><a href="/fortuner.html">Fortuner</a></li>
+                </ul>
+            </div>
+            <div class="footer-section wisata-links">
+                <h2><strong>Paket Wisata</strong></h2>
+                <ul class="footer-links">
+                    <li><a href="/bromo.html">Bromo</a></li>
+                    <li><a href="/baluran.html">Baluran</a></li>
+                </ul>
+            </div>
+            <div class="footer-section find-us">
+                <h2><strong>Find Us</strong></h2>
+                <ul>
+                    <li>
+                        <a href="https://maps.app.goo.gl/zBLJUtuqUeR7uXcn7" target="_blank">
+                            <i class='bx bxs-map'></i>
+                            <p>Jalan Contoh No. 123, Kota, Provinsi</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:trilinggatrans@gmail.com">
+                            <i class='bx bxs-envelope'></i>
+                            <p>trilinggatrans@gmail.com</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/+6283129646782" target="_blank">
+                            <i class='bx bxs-phone'></i>
+                            <p>0123-4567-8901</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>                
+        </div>
+        <hr style="border: 1px solid #000; margin-top: 20px;">
+    </div>
+    <hr class="footer-bottom-divider">
+    <div class="footer-bottom">
+        <p>&copy; 2024 Trilangga Trans. All Rights Reserved.</p>
+    </div>
+</div>
+<!-- end of footer -->
+<script src="main.js"></script>
+</body>
+</html>

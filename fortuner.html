@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortuner</title>
+    <!-- css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #1743e3;
+    --color-white: #eaeaea;
+    --color-dark: #333;
+    --color-black: #222;
+}
+
+body {
+    font-family: 'Poppins', serif;
+    color: var(--color-black);
+    background: white;
+}
+
+.fortuner {
+    text-align: center;
+    margin: 5rem auto;
+}
+
+.heading {
+    font-size: 2.5rem;
+    color: var(--color-black);
+    margin-bottom: 0.8rem;
+}
+
+.fortuner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -1rem;
+}
+
+.car-box {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: auto;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.img-fortuner, .fortuner-details {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-fortuner {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 20px;
+}
+
+.img-fortuner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.fortuner-details {
+    padding: 2rem;
+    border: 1px solid black;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fortuner-details h1 {
+    font-size: 2rem;
+    color: var(--color-black);
+    margin-bottom: 0.5rem;
+}
+
+.fortuner-details h2 {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.fortuner-details h2 span {
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: 400;
+}
+
+.fortuner-details p {
+    margin-top: 1rem;
+    line-height: 1.6;
+    text-align: center; /* Mengatur teks di tengah */
+}
+
+.btn-pesan {
+    margin-top: 1rem;
+    padding: 12px 80px; /* Memperlebar tombol */
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-pesan:hover {
+    transform: scale(1.05);
+}
+
+.important-warning {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 3px;
+    background-color: rgb(212, 7, 7);
+    color: var(--color-black);
+    text-align: center;
+}
+
+.important-warning h1 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.important-warning p {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.terms-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+    margin-bottom: 2rem;
+}
+
+.rental-terms, .cancelation-terms {
+    flex: 1;
+    padding: 2rem;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+.rental-terms h1, .cancelation-terms h1 {
+    margin-bottom: 1rem;
+}
+
+.rental-terms ul, .cancelation-terms ul {
+    list-style-position: inside;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.rental-terms li, .cancelation-terms li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    list-style-type: disc;
+}
+
+.cancelation-terms p {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.cancelation-terms p::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-dark);
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+
+/* animasi */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    60% {
+        opacity: 0.7;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fortuner-container, .terms-container {
+    animation: fadeInUp 1s ease-out; 
+    animation-fill-mode: both; 
+}
+
+.fortuner-container {
+    animation-delay: 0.4s; 
+}
+
+.terms-container {
+    animation-delay: 0.4s; 
+}
+
+.fortuner-container, .terms-container {
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; 
+}
+
+.fortuner-container.animated, .terms-container.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fortuner h1, .fortuner p {
+    animation: fadeInUp 1s ease-out;
+    animation-fill-mode: both;
+    opacity: 0; 
+    transform: translateY(20px); 
+}
+
+.fortuner h1, .fortuner p {
+    animation-delay: 0.2s; 
+}
+
+
+/* responsif */
+@media (max-width: 768px) {
+    .car-box {
+        flex-direction: column;
+        max-width: 90%; /* Mengurangi lebar maksimum kotak */
+        margin: 0 auto; /* Menjaga kotak tetap berada di tengah */
+    }
+
+    .img-fortuner {
+        width: 100%;
+        padding: 10px; /* Mengurangi padding gambar */
+    }
+
+    .fortuner-details {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .btn-pesan {
+        padding: 12px 30px; /* Sesuaikan ukuran tombol untuk layar kecil */
+    }
+
+    .important-warning {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .terms-container {
+        flex-direction: column;
+        max-width: 90%; /* Mengurangi lebar maksimum container */
+        margin: 0 auto; /* Menjaga container tetap berada di tengah */
+    }
+
+    .rental-terms, .cancelation-terms {
+        padding: 1rem;
+    }
+
+    .rental-terms ul, .cancelation-terms ul {
+        padding-left: 10px;
+    }
+
+    .rental-terms li, .cancelation-terms li {
+        font-size: 0.9rem;
+    }
+
+    .cancelation-terms p::before {
+        font-size: 1rem;
+    }
+
+    .cancelation-terms {
+        margin-bottom: 2rem; /* Menambahkan margin bawah */
+    }
+}
+
+@media (max-width: 1024px) {
+    .car-box {
+        flex-direction: column;
+        max-width: 95%; /* Mengurangi lebar maksimum kotak */
+        margin: 0 auto; /* Menjaga kotak tetap berada di tengah */
+    }
+
+    .img-fortuner {
+        width: 100%;
+        padding: 15px; /* Mengurangi padding gambar */
+    }
+
+    .fortuner-details {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .btn-pesan {
+        padding: 12px 50px; /* Sesuaikan ukuran tombol untuk layar tablet */
+    }
+
+    .important-warning {
+        padding: 1.5rem;
+    }
+
+    .terms-container {
+        flex-direction: column;
+        max-width: 95%; /* Mengurangi lebar maksimum container */
+        margin: 0 auto; /* Menjaga container tetap berada di tengah */
+    }
+
+    .cancelation-terms {
+        margin-bottom: 2rem; /* Menambahkan margin bawah */
+    }
+}
+
+</style>
+
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="container header-container">
+            <!-- menu icon -->
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <!-- logo -->
+            <a href="" class="logo"><h3>Trilingga <span>Trans</span></h3></a>
+            <!-- nav link -->
+            <ul class="nav-link">
+                <li><a href="/home.html">Beranda</a></li>
+                <li>
+                    <a href="#" class="active">Sewa Mobil</a>
+                    <i class='bx bx-chevron-down chevron-icon'></i>
+                    <div class="dropdown-content">
+                        <a href="/avanza.html">Avanza</a>
+                        <a href="/innova.html">Innova</a>
+                        <a href="/fortuner.html">Fortuner</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Paket Wisata</a>
+                    <i class='bx bx-chevron-down chevron-icon'></i>
+                    <div class="dropdown-content">
+                        <a href="/bromo.html">Bromo</a>
+                        <a href="/baluran.html">Baluran</a>
+                    </div>
+                </li>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="/hubungikami.html">Hubungi Kami</a></li>
+            </ul>
+            <ul class="social-link">
+                <li><a href="" style="--i:1;"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="" style="--i:2;"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="" style="--i:3;"><i class="fab fa-instagram"></i></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- end of header -->
+
+    <!-- icon wa -->
+    <div class="icon">
+        <a href="https://wa.me/+6283129646782?text=Halo!%20Saya%20tertarik%20untuk%20menyewa%20mobil%20dari%20rental%20Anda.%20Bisakah%20saya%20mendapatkan%20informasi%20lebih%20lanjut%20mengenai%20ketersediaan%20mobil%20dengan%20merk%20(Sebutkan merk mobil yang ingin anda sewa)%3F" target="_blank">
+            <div class="img-wa">
+                <img src="images/iconwa.jpeg" alt="WhatsApp Icon">
+            </div>
+        </a>
+    </div>
+    <!-- end of icon wa -->
+
+    <!-- fortuner -->
+    <div class="fortuner">
+        <h1 class="heading">Sewa Mobil Fortuner</h1>
+        <p>Nikmati perjalanan nyaman dengan Fortuner, mobil keluarga yang mewah dan luas. <br>Hubungi kami untuk detail sewa dan jadwalkan perjalanan Anda sekarang.</p>
+    </div>
+    <div class="fortuner-container">
+        <div class="car-box">
+            <div class="img-fortuner">
+                <img src="images/fortuner.jpeg" alt="Fortuner">
+            </div>
+            <div class="fortuner-details">
+                <h1>Fortuner</h1>
+                <h2>Rp 700.000<span>/hari</span></h2>
+                <p>Fortuner dengan kapasitas hingga 7 penumpang siap menemani perjalanan Anda dengan kenyamanan maksimal. Dilengkapi dengan pilihan transmisi otomatis, mobil ini sangat cocok untuk perjalanan jauh dan keluarga. Anda dapat memilih untuk menyewa dengan atau tanpa driver sesuai keinginan Anda. Harga yang tertera sudah termasuk layanan driver untuk kemudahan dan kenyamanan Anda.</p>
+                <a href="https://wa.me/+6283129646782?text=Halo!%20Saya%20tertarik%20untuk%20menyewa%20mobil%20Innova.%20Apakah%20mobil%20Fortuner%20tersedia%20dan%20bisakah%20saya%20mendapatkan%20informasi%20lebih%20lanjut%20mengenai%20detail%20sewa%20mobil%20tersebut%3F" target="_blank" class="btn-pesan">Pesan Sekarang</a>
+            </div>
+        </div>
+        <!-- Peringatan Penting -->
+        <div class="important-warning">
+            <h1>Peringatan Penting</h1>
+            <p>Pastikan untuk tidak melakukan transaksi langsung dengan driver, karena beberapa driver yang bekerja di perusahaan persewaan mobil mungkin merupakan DRIVER KONTRAK. Kami tidak bertanggung jawab jika pesanan Anda tidak sesuai, karena driver tersebut mungkin tidak lagi bekerja dengan kami. Pastikan Anda hanya memesan melalui nomor kontak dan alamat kantor resmi Trilangga Trans untuk menjamin keamanan dan kepuasan layanan Anda.</p>
+        </div>
+        <!-- End of Peringatan Penting -->
+        <div class="terms-container">
+            <div class="rental-terms">
+                <h1>Ketentuan Sewa</h1>
+                <ul>
+                    <li>Harga sewa yang tertera di atas adalah harga sewa dalam kota Malang.</li>
+                    <li>Uang muka sewa mobil minimal 10% dari total biaya sewa.</li>
+                    <li>Harga sewa tidak termasuk biaya parkir dan tiket masuk destinasi.</li>
+                    <li>Durasi sewa maksimal hingga jam 12 malam.</li>
+                    <li>Kelebihan waktu sewa akan dikenakan biaya tambahan 5% per jam dari total biaya sewa.</li>
+                </ul>
+            </div>
+            <div class="cancelation-terms">
+                <h1>Pembatalan Sewa</h1>
+                <p>GRATIS pembatalan. Uang muka akan dikembalikan bila pembatalan maksimal 48 jam sebelum tanggal pemesanan.</p>
+                <p>Apabila pelanggan membatalkan pesanan rental mobil kurang dari 1×24 jam sebelum tgl pemesanan, akan dikenakan biaya pembatalan sebesar 50% dari harga sewa kendaraan per hari.</p>
+                <p>Jika pelanggan membatalkan penggunaan kendaraan sewa pada hari H, maka akan dikenakan biaya pembatalan sebesar 1 hari dari harga sewa kendaraan.</p>
+            </div>
+        </div>
+    </div>
+    <!-- end of avanza -->
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-sections">
+                <div class="footer-section about">
+                    <div class="aboutus-content">
+                        <a href="" class="logo-a"><h3>Tentang Kami</h3></a>
+                        <!-- <img src="images/logo.png" alt="Trilangga Trans Logo"> -->
+                        <p>Trilangga Trans adalah pilihan terbaik untuk kebutuhan rental mobil dan perjalanan wisata Anda.</p>
+                        <div class="social-icons">
+                            <div class="icons-grid">
+                                <a href="https://www.instagram.com/lopipupozcv?igsh=MWg4eXk4ajlqeG91eQ=="><i class='bx bxl-instagram'></i></a>
+                                <a href="#"><i class='bx bxl-facebook'></i></a>
+                                <a href="#"><i class='bx bxl-twitter'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section quick-links">
+                    <h2><strong>Quick Links</strong></h2>
+                    <ul class="footer-links">
+                        <li><a href="/home.html">Beranda</a></li>
+                        <li><a href="/tentangkami.html">Tentang Kami</a></li>
+                        <li><a href="/hubungikami.html">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section sewa-links">
+                    <h2><strong>Sewa Mobil</strong></h2>
+                    <ul class="footer-links">
+                        <li><a href="/avanza.html">Avanza</a></li>
+                        <li><a href="/innova.html">Innova</a></li>
+                        <li><a href="/fortuner.html">Fortuner</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section wisata-links">
+                    <h2><strong>Paket Wisata</strong></h2>
+                    <ul class="footer-links">
+                        <li><a href="/bromo.html">Bromo</a></li>
+                        <li><a href="/bali.html">Bali</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section find-us">
+                    <h2><strong>Find Us</strong></h2>
+                    <ul>
+                        <li>
+                            <a href="https://maps.app.goo.gl/zBLJUtuqUeR7uXcn7" target="_blank">
+                                <i class='bx bxs-map'></i>
+                                <p>Jalan Contoh No. 123, Kota, Provinsi</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:trilinggatrans@gmail.com">
+                                <i class='bx bxs-envelope'></i>
+                                <p>trilinggatrans@gmail.com</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/+6283129646782" target="_blank">
+                                <i class='bx bxs-phone'></i>
+                                <p>0123-4567-8901</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>                
+            </div>
+            <hr style="border: 1px solid #000; margin-top: 20px;">
+        </div>
+        <hr class="footer-bottom-divider">
+        <div class="footer-bottom">
+            <p>&copy; 2024 Trilangga Trans. All Rights Reserved.</p>
+        </div>
+    </div>
+    <!-- end of footer -->
+
+    <!-- link js -->
+    <script src="main.js"></script>
+</body>
+</html>

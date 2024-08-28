@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css utk header n footer -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Tentang Kami</title>
+    <style>
+        /* Definisi animasi fadeInUp yang lebih halus */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Awal animasi dari posisi lebih rendah */
+    }
+    60% {
+        opacity: 0.7; /* Menambah opacity secara bertahap */
+        transform: translateY(-10px); /* Posisi lebih tinggi sebelum mencapai akhir */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Posisi akhir pada tempat semula */
+    }
+}
+
+/* Kontainer umum untuk .about-us */
+.about-us {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 4rem; /* Menambahkan margin-top untuk mendorong bagian ke bawah */
+}
+
+/* Styling dan animasi untuk heading */
+.about-us-heading {
+    opacity: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    animation: fadeInUp 1s ease-out;
+    animation-fill-mode: both; /* Memastikan animasi tetap pada status akhir setelah selesai */
+    animation-delay: 0s; /* Delay animasi untuk heading */
+}
+
+/* Styling dan animasi untuk elemen lainnya */
+.about-us-intro,
+.about-us-text,
+.about-us-section,
+.about-us-list {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out; /* Terapkan animasi fadeInUp */
+    animation-fill-mode: both; /* Memastikan animasi tetap pada status akhir setelah selesai */
+}
+
+.about-us-intro {
+    animation-delay: 0.2s; /* Delay animasi untuk intro */
+}
+
+.about-us-text {
+    animation-delay: 0.4s; /* Delay animasi untuk teks */
+}
+
+.about-us-section {
+    animation-delay: 0.6s; /* Delay animasi untuk section */
+}
+
+.about-us-list {
+    animation-delay: 0.8s; /* Delay animasi untuk daftar */
+}
+
+/* Styling untuk span di dalam .about-us-intro dan .about-us-text */
+.about-us-intro span,
+.about-us-text span {
+    font-weight: bold;
+}
+
+.about-us-intro,
+.about-us-text {
+    font-size: 1rem; /* Ukuran font untuk intro dan teks */
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.about-us-section {
+    font-size: 1.2rem; /* Ukuran font untuk section */
+    margin-top: 2rem; /* Margin atas untuk section */
+}
+
+.about-us-list {
+    margin-top: 2rem; /* Margin atas untuk daftar */
+    margin-bottom: 3rem; /* Margin bawah untuk daftar */
+    padding-left: 1.5rem; /* Padding untuk bullet points */
+}
+
+.about-us-list li {
+    font-size: 1rem; /* Ukuran font untuk item daftar */
+    margin-bottom: 0.5rem;
+    list-style-type: disc; /* Daftar berbulat */
+    list-style-position: outside; /* Bullet di luar kotak teks */
+    padding-left: 1.5rem; /* Padding untuk penyesuaian teks */
+}
+
+/* Media Queries untuk Responsive Design */
+
+/* Untuk layar kecil seperti smartphone */
+@media (max-width: 768px) {
+    .about-us {
+        padding: 15px;
+        margin-top: 2rem; /* Mengurangi margin-top untuk layar kecil */
+    }
+
+    .about-us-heading {
+        font-size: 1.8rem; /* Menyesuaikan ukuran font heading */
+    }
+
+    .about-us-intro,
+    .about-us-text {
+        font-size: 0.9rem; /* Menyesuaikan ukuran font untuk intro dan teks */
+    }
+
+    .about-us-section {
+        font-size: 1rem; /* Menyesuaikan ukuran font untuk section */
+    }
+
+    .about-us-list {
+        padding-left: 1rem; /* Mengurangi padding untuk layar kecil */
+    }
+
+    .about-us-list li {
+        font-size: 0.9rem; /* Menyesuaikan ukuran font untuk item daftar */
+    }
+}
+
+/* Untuk layar tablet */
+@media (max-width: 1024px) {
+    .about-us {
+        padding: 20px;
+        margin-top: 3rem; /* Menyesuaikan margin-top untuk tablet */
+    }
+
+    .about-us-heading {
+        font-size: 2rem; /* Menyesuaikan ukuran font heading */
+    }
+
+    .about-us-intro,
+    .about-us-text {
+        font-size: 0.95rem; /* Menyesuaikan ukuran font untuk intro dan teks */
+    }
+
+    .about-us-section {
+        font-size: 1.1rem; /* Menyesuaikan ukuran font untuk section */
+    }
+
+    .about-us-list {
+        padding-left: 1.25rem; /* Mengurangi padding untuk tablet */
+    }
+
+    .about-us-list li {
+        font-size: 0.95rem; /* Menyesuaikan ukuran font untuk item daftar */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="container header-container">
+            <!-- menu icon -->
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <!-- logo -->
+            <a href="" class="logo"><h3>Trilingga <span>Trans</span></h3></a>
+            <!-- nav link -->
+            <ul class="nav-link">
+                <li><a href="/home.html">Beranda</a></li>
+                <li>
+                    <a href="/sewamobil.html">Sewa Mobil</a>
+                    <i class='bx bx-chevron-down chevron-icon'></i>
+                    <div class="dropdown-content">
+                        <a href="/avanza.html">Avanza</a>
+                        <a href="/innova.html">Innova</a>
+                        <a href="/fortuner.html">Fortuner</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="/paketwisata.html">Paket Wisata</a>
+                    <i class='bx bx-chevron-down chevron-icon'></i>
+                    <div class="dropdown-content">
+                        <a href="/bromo.html">Bromo</a>
+                        <a href="/baluran.html">Baluran</a>
+                    </div>
+                </li>
+                <li><a href="/tentangkami.html" class="active">Tentang Kami</a></li>
+                <li><a href="/hubungikami.html">Hubungi Kami</a></li>
+            </ul>
+            <ul class="social-link">
+                <li><a href="" style="--i:1;"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="" style="--i:2;"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="" style="--i:3;"><i class="fab fa-instagram"></i></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- end of header -->
+
+    <!-- icon wa -->
+    <div class="icon">
+        <a href="https://wa.me/+6283129646782?text=Halo!%20Saya%20tertarik%20untuk%20menyewa%20mobil%20dari%20rental%20Anda.%20Bisakah%20saya%20mendapatkan%20informasi%20lebih%20lanjut%20mengenai%20ketersediaan%20mobil%20dengan%20merk%20(Sebutkan merk mobil yang ingin anda sewa)%3F" target="_blank">
+            <div class="img-wa">
+                <img src="images/iconwa.jpeg" alt="WhatsApp Icon">
+            </div>
+        </a>
+    </div>
+    <!-- end of icon wa -->
+
+    <!-- about us -->
+    <div id="about" class="about-us">
+        <h1 class="about-us-heading animated"><strong>Tentang Kami</strong></h1>
+        <p class="about-us-intro animated"><span>Trilangga Trans</span> adalah pilihan terbaik untuk kebutuhan rental mobil dan perjalanan wisata Anda. Kami tidak hanya menyediakan berbagai jenis mobil berkualitas yang siap mengantarkan Anda ke mana pun tujuan Anda, tetapi juga menghadirkan layanan wisata yang lengkap dan nyaman. Dengan pengalaman bertahun-tahun di industri transportasi, kami memahami betul pentingnya kenyamanan, keamanan, dan kepuasan pelanggan. Itulah mengapa kami selalu memastikan bahwa setiap kendaraan yang kami sediakan dalam <span>kondisi prima, bersih dan dilengkapi dengan fasilitas</span> untuk menjamin perjalanan yang lancar.</p>
+
+        <p class="about-us-text animated">Kami di Trilangga Trans juga berkomitmen terhadap <span>pelayanan yang ramah dan profesional.</span> Tim kami siap membantu Anda memilih kendaraan yang sesuai dengan kebutuhan Anda, serta memberikan rekomendasi perjalanan yang akan membuat pengalaman wisata Anda lebih berkesan. Keunggulan kami tidak hanya terletak pada armada kendaraan yang beragam, tetapi juga pada <span>harga yang bersahabat dan transparan,</span> sehingga Anda tidak perlu khawatir akan biaya tambahan yang tidak diinginkan.</p>
+
+        <h2 class="about-us-section animated">Visi</h2>
+        <p class="about-us-text animated">Menjadi perusahaan terdepan dan terbesar di Indonesia dalam bidang jasa pelayanan pariwisata dengan kualitas pelayanan terbaik yang dapat memberikan kontribusi nyata bagi masyarakat dan lingkungan sekitarnya.</p>
+
+        <h2 class="about-us-section animated">Misi</h2>
+        <ul class="about-us-list animated">
+            <li>Menjadi perusahaan penyedia layanan transportasi dengan kualitas layanan prima.</li>
+            <li>Menjadi perusahaan yang selalu up to date dalam memberikan kenyamanan dan keamanan penumpang yang akan melakukan perjalanan.</li>
+            <li>Menjadi perusahaan yang selalu respect terhadap karyawan, lingkungan, dan masyarakat sekitarnya.</li>
+            <li>Menjadi perusahaan layanan jasa one stop service for tour and travel yang tangguh dan unggul dengan jaringan mitra kerja yang luas.</li>
+        </ul>
+    </div>
+    <!-- end of about -->
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-sections">
+                <div class="footer-section about">
+                    <div class="aboutus-content">
+                        <a href="" class="logo-a"><h3>Tentang Kami</h3></a>
+                        <!-- <img src="images/logo.png" alt="Trilangga Trans Logo"> -->
+                        <p>Trilangga Trans adalah pilihan terbaik untuk kebutuhan rental mobil dan perjalanan wisata Anda.</p>
+                        <div class="social-icons">
+                            <div class="icons-grid">
+                                <a href="https://www.instagram.com/lopipupozcv?igsh=MWg4eXk4ajlqeG91eQ=="><i class='bx bxl-instagram'></i></a>
+                                <a href="#"><i class='bx bxl-facebook'></i></a>
+                                <a href="#"><i class='bx bxl-twitter'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section quick-links">
+                    <h2><strong>Quick Links</strong></h2>
+                    <ul class="footer-links">
+                        <li><a href="/home.html">Beranda</a></li>
+                        <li><a href="/tentangkami.html">Tentang Kami</a></li>
+                        <li><a href="/hubungikami.html">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section sewa-links">
+                    <h2><strong>Sewa Mobil</strong></h2>
+                    <ul class="footer-links">
+                        <li><a href="/avanza.html">Avanza</a></li>
+                        <li><a href="/innova.html">Innova</a></li>
+                        <li><a href="/fortuner.html">Fortuner</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section wisata-links">
+                    <h2><strong>Paket Wisata</strong></h2>
+                    <ul class="footer-links">
+                        <li><a href="/bromo.html">Bromo</a></li>
+                        <li><a href="/bali.html">Bali</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section find-us">
+                    <h2><strong>Find Us</strong></h2>
+                    <ul>
+                        <li>
+                            <a href="https://maps.app.goo.gl/zBLJUtuqUeR7uXcn7" target="_blank">
+                                <i class='bx bxs-map'></i>
+                                <p>Jalan Contoh No. 123, Kota, Provinsi</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:trilinggatrans@gmail.com">
+                                <i class='bx bxs-envelope'></i>
+                                <p>trilinggatrans@gmail.com</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/+6283129646782" target="_blank">
+                                <i class='bx bxs-phone'></i>
+                                <p>0123-4567-8901</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>                
+            </div>
+            <hr style="border: 1px solid #000; margin-top: 20px;">
+        </div>
+        <hr class="footer-bottom-divider">
+        <div class="footer-bottom">
+            <p>&copy; 2024 Trilangga Trans. All Rights Reserved.</p>
+        </div>
+    </div>
+    <!-- end of footer -->
+
+
+    <script src="main.js"></script>
+</body>
+</html>
