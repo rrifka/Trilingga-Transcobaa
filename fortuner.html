@@ -4,354 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fortuner</title>
     <!-- css -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
+    <!-- swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    box-sizing: border-box;
-}
-
-:root {
-    --color-primary: #1743e3;
-    --color-white: #eaeaea;
-    --color-dark: #333;
-    --color-black: #222;
-}
-
-body {
-    font-family: 'Poppins', serif;
-    color: var(--color-black);
-    background: white;
-}
-
-.fortuner {
-    text-align: center;
-    margin: 5rem auto;
-}
-
-.heading {
-    font-size: 2.5rem;
-    color: var(--color-black);
-    margin-bottom: 0.8rem;
-}
-
-.fortuner-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -1rem;
-}
-
-.car-box {
-    display: flex;
-    flex-direction: row;
-    max-width: 1200px;
-    margin: auto;
-    gap: 2rem;
-    justify-content: center;
-    align-items: stretch;
-}
-
-.img-fortuner, .fortuner-details {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.img-fortuner {
-    border: 1px solid black;
-    border-radius: 3px;
-    padding: 20px;
-}
-
-.img-fortuner img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 3px;
-}
-
-.fortuner-details {
-    padding: 2rem;
-    border: 1px solid black;
-    border-radius: 3px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.fortuner-details h1 {
-    font-size: 2rem;
-    color: var(--color-black);
-    margin-bottom: 0.5rem;
-}
-
-.fortuner-details h2 {
-    color: var(--color-primary);
-    font-size: 1.8rem;
-    margin: 0;
-}
-
-.fortuner-details h2 span {
-    font-size: 1.3rem;
-    color: #333;
-    font-weight: 400;
-}
-
-.fortuner-details p {
-    margin-top: 1rem;
-    line-height: 1.6;
-    text-align: center; /* Mengatur teks di tengah */
-}
-
-.btn-pesan {
-    margin-top: 1rem;
-    padding: 12px 80px; /* Memperlebar tombol */
-    background-color: var(--color-primary);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    align-items: center;
-    transition: 0.3s ease-in-out;
-}
-
-.btn-pesan:hover {
-    transform: scale(1.05);
-}
-
-.important-warning {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border-radius: 3px;
-    background-color: rgb(212, 7, 7);
-    color: var(--color-black);
-    text-align: center;
-}
-
-.important-warning h1 {
-    font-size: 1.8rem;
-    color: white;
-    margin-bottom: 1rem;
-}
-
-.important-warning p {
-    color: white;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-.terms-container {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: stretch;
-    margin-bottom: 2rem;
-}
-
-.rental-terms, .cancelation-terms {
-    flex: 1;
-    padding: 2rem;
-    border-radius: 3px;
-    border: 1px solid black;
-}
-
-.rental-terms h1, .cancelation-terms h1 {
-    margin-bottom: 1rem;
-}
-
-.rental-terms ul, .cancelation-terms ul {
-    list-style-position: inside;
-    padding-left: 20px;
-    margin: 0;
-}
-
-.rental-terms li, .cancelation-terms li {
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
-    list-style-type: disc;
-}
-
-.cancelation-terms p {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
-}
-
-.cancelation-terms p::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--color-dark);
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-
-/* animasi */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    60% {
-        opacity: 0.7;
-        transform: translateY(-10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fortuner-container, .terms-container {
-    animation: fadeInUp 1s ease-out; 
-    animation-fill-mode: both; 
-}
-
-.fortuner-container {
-    animation-delay: 0.4s; 
-}
-
-.terms-container {
-    animation-delay: 0.4s; 
-}
-
-.fortuner-container, .terms-container {
-    opacity: 0; 
-    transform: translateY(20px); 
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out; 
-}
-
-.fortuner-container.animated, .terms-container.animated {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.fortuner h1, .fortuner p {
-    animation: fadeInUp 1s ease-out;
-    animation-fill-mode: both;
-    opacity: 0; 
-    transform: translateY(20px); 
-}
-
-.fortuner h1, .fortuner p {
-    animation-delay: 0.2s; 
-}
-
-
-/* responsif */
-@media (max-width: 768px) {
-    .car-box {
-        flex-direction: column;
-        max-width: 90%; /* Mengurangi lebar maksimum kotak */
-        margin: 0 auto; /* Menjaga kotak tetap berada di tengah */
-    }
-
-    .img-fortuner {
-        width: 100%;
-        padding: 10px; /* Mengurangi padding gambar */
-    }
-
-    .fortuner-details {
-        width: 100%;
-        padding: 1rem;
-    }
-
-    .btn-pesan {
-        padding: 12px 30px; /* Sesuaikan ukuran tombol untuk layar kecil */
-    }
-
-    .important-warning {
-        padding: 1rem;
-        font-size: 0.9rem;
-    }
-
-    .terms-container {
-        flex-direction: column;
-        max-width: 90%; /* Mengurangi lebar maksimum container */
-        margin: 0 auto; /* Menjaga container tetap berada di tengah */
-    }
-
-    .rental-terms, .cancelation-terms {
-        padding: 1rem;
-    }
-
-    .rental-terms ul, .cancelation-terms ul {
-        padding-left: 10px;
-    }
-
-    .rental-terms li, .cancelation-terms li {
-        font-size: 0.9rem;
-    }
-
-    .cancelation-terms p::before {
-        font-size: 1rem;
-    }
-
-    .cancelation-terms {
-        margin-bottom: 2rem; /* Menambahkan margin bawah */
-    }
-}
-
-@media (max-width: 1024px) {
-    .car-box {
-        flex-direction: column;
-        max-width: 95%; /* Mengurangi lebar maksimum kotak */
-        margin: 0 auto; /* Menjaga kotak tetap berada di tengah */
-    }
-
-    .img-fortuner {
-        width: 100%;
-        padding: 15px; /* Mengurangi padding gambar */
-    }
-
-    .fortuner-details {
-        width: 100%;
-        padding: 1.5rem;
-    }
-
-    .btn-pesan {
-        padding: 12px 50px; /* Sesuaikan ukuran tombol untuk layar tablet */
-    }
-
-    .important-warning {
-        padding: 1.5rem;
-    }
-
-    .terms-container {
-        flex-direction: column;
-        max-width: 95%; /* Mengurangi lebar maksimum container */
-        margin: 0 auto; /* Menjaga container tetap berada di tengah */
-    }
-
-    .cancelation-terms {
-        margin-bottom: 2rem; /* Menambahkan margin bawah */
-    }
-}
-
-</style>
-
+    <title>Fortuner</title>
 </head>
 <body>
     <!-- header -->
@@ -363,7 +23,7 @@ body {
             <a href="" class="logo"><h3>Trilingga <span>Trans</span></h3></a>
             <!-- nav link -->
             <ul class="nav-link">
-                <li><a href="/home.html">Beranda</a></li>
+                <li><a href="/index.html">Beranda</a></li>
                 <li>
                     <a href="#" class="active">Sewa Mobil</a>
                     <i class='bx bx-chevron-down chevron-icon'></i>
@@ -397,7 +57,7 @@ body {
     <div class="icon">
         <a href="https://wa.me/+6283129646782?text=Halo!%20Saya%20tertarik%20untuk%20menyewa%20mobil%20dari%20rental%20Anda.%20Bisakah%20saya%20mendapatkan%20informasi%20lebih%20lanjut%20mengenai%20ketersediaan%20mobil%20dengan%20merk%20(Sebutkan merk mobil yang ingin anda sewa)%3F" target="_blank">
             <div class="img-wa">
-                <img src="images/iconwa.jpeg" alt="WhatsApp Icon">
+                <img src="/images/iconwa.jpeg" alt="WhatsApp Icon">
             </div>
         </a>
     </div>
@@ -468,7 +128,7 @@ body {
                 <div class="footer-section quick-links">
                     <h2><strong>Quick Links</strong></h2>
                     <ul class="footer-links">
-                        <li><a href="/home.html">Beranda</a></li>
+                        <li><a href="/index.html">Beranda</a></li>
                         <li><a href="/tentangkami.html">Tentang Kami</a></li>
                         <li><a href="/hubungikami.html">Hubungi Kami</a></li>
                     </ul>
@@ -524,4 +184,343 @@ body {
     <!-- link js -->
     <script src="main.js"></script>
 </body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+    
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+    
+    :root {
+        --color-primary: #1743e3;
+        --color-white: #eaeaea;
+        --color-dark: #333;
+        --color-black: #222;
+    }
+    
+    body {
+        font-family: 'Poppins', serif;
+        color: var(--color-black);
+        background: white;
+    }
+    
+    .fortuner {
+        text-align: center;
+        margin: 5rem auto;
+    }
+    
+    .heading {
+        font-size: 2.5rem;
+        color: var(--color-black);
+        margin-bottom: 0.8rem;
+    }
+    
+    .fortuner-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -1rem;
+    }
+    
+    .car-box {
+        display: flex;
+        flex-direction: row;
+        max-width: 1200px;
+        margin: auto;
+        gap: 2rem;
+        justify-content: center;
+        align-items: stretch;
+    }
+    
+    .img-fortuner, .fortuner-details {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .img-fortuner {
+        border: 1px solid black;
+        border-radius: 3px;
+        padding: 20px;
+    }
+    
+    .img-fortuner img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 3px;
+    }
+    
+    .fortuner-details {
+        padding: 2rem;
+        border: 1px solid black;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .fortuner-details h1 {
+        font-size: 2rem;
+        color: var(--color-black);
+        margin-bottom: 0.5rem;
+    }
+    
+    .fortuner-details h2 {
+        color: var(--color-primary);
+        font-size: 1.8rem;
+        margin: 0;
+    }
+    
+    .fortuner-details h2 span {
+        font-size: 1.3rem;
+        color: #333;
+        font-weight: 400;
+    }
+    
+    .fortuner-details p {
+        margin-top: 1rem;
+        line-height: 1.6;
+        text-align: center; /* Mengatur teks di tengah */
+    }
+    
+    .btn-pesan {
+        margin-top: 1rem;
+        padding: 12px 80px; /* Memperlebar tombol */
+        background-color: var(--color-primary);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        align-items: center;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .btn-pesan:hover {
+        transform: scale(1.05);
+    }
+    
+    .important-warning {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 3px;
+        background-color: rgb(212, 7, 7);
+        color: var(--color-black);
+        text-align: center;
+    }
+    
+    .important-warning h1 {
+        font-size: 1.8rem;
+        color: white;
+        margin-bottom: 1rem;
+    }
+    
+    .important-warning p {
+        color: white;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+    
+    .terms-container {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: stretch;
+        margin-bottom: 2rem;
+    }
+    
+    .rental-terms, .cancelation-terms {
+        flex: 1;
+        padding: 2rem;
+        border-radius: 3px;
+        border: 1px solid black;
+    }
+    
+    .rental-terms h1, .cancelation-terms h1 {
+        margin-bottom: 1rem;
+    }
+    
+    .rental-terms ul, .cancelation-terms ul {
+        list-style-position: inside;
+        padding-left: 20px;
+        margin: 0;
+    }
+    
+    .rental-terms li, .cancelation-terms li {
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+        list-style-type: disc;
+    }
+    
+    .cancelation-terms p {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+    }
+    
+    .cancelation-terms p::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: var(--color-dark);
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+    
+    
+    /* animasi */
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        60% {
+            opacity: 0.7;
+            transform: translateY(-10px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .fortuner-container, .terms-container {
+        animation: fadeInUp 1s ease-out; 
+        animation-fill-mode: both; 
+    }
+    
+    .fortuner-container {
+        animation-delay: 0.4s; 
+    }
+    
+    .terms-container {
+        animation-delay: 0.4s; 
+    }
+    
+    .fortuner-container, .terms-container {
+        opacity: 0; 
+        transform: translateY(20px); 
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out; 
+    }
+    
+    .fortuner-container.animated, .terms-container.animated {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .fortuner h1, .fortuner p {
+        animation: fadeInUp 1s ease-out;
+        animation-fill-mode: both;
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    
+    .fortuner h1, .fortuner p {
+        animation-delay: 0.2s; 
+    }
+    
+    
+    /* responsif */
+    @media (max-width: 768px) {
+        .car-box {
+            flex-direction: column;
+            max-width: 90%; /* Mengurangi lebar maksimum kotak */
+            margin: 0 auto; /* Menjaga kotak tetap berada di tengah */
+        }
+    
+        .img-fortuner {
+            width: 100%;
+            padding: 10px; /* Mengurangi padding gambar */
+        }
+    
+        .fortuner-details {
+            width: 100%;
+            padding: 1rem;
+        }
+    
+        .btn-pesan {
+            padding: 12px 30px; /* Sesuaikan ukuran tombol untuk layar kecil */
+        }
+    
+        .important-warning {
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+    
+        .terms-container {
+            flex-direction: column;
+            max-width: 90%; /* Mengurangi lebar maksimum container */
+            margin: 0 auto; /* Menjaga container tetap berada di tengah */
+        }
+    
+        .rental-terms, .cancelation-terms {
+            padding: 1rem;
+        }
+    
+        .rental-terms ul, .cancelation-terms ul {
+            padding-left: 10px;
+        }
+    
+        .rental-terms li, .cancelation-terms li {
+            font-size: 0.9rem;
+        }
+    
+        .cancelation-terms p::before {
+            font-size: 1rem;
+        }
+    
+        .cancelation-terms {
+            margin-bottom: 2rem; /* Menambahkan margin bawah */
+        }
+    }
+    
+    @media (max-width: 1024px) {
+        .car-box {
+            flex-direction: column;
+            max-width: 95%; /* Mengurangi lebar maksimum kotak */
+            margin: 0 auto; /* Menjaga kotak tetap berada di tengah */
+        }
+    
+        .img-fortuner {
+            width: 100%;
+            padding: 15px; /* Mengurangi padding gambar */
+        }
+    
+        .fortuner-details {
+            width: 100%;
+            padding: 1.5rem;
+        }
+    
+        .btn-pesan {
+            padding: 12px 50px; /* Sesuaikan ukuran tombol untuk layar tablet */
+        }
+    
+        .important-warning {
+            padding: 1.5rem;
+        }
+    
+        .terms-container {
+            flex-direction: column;
+            max-width: 95%; /* Mengurangi lebar maksimum container */
+            margin: 0 auto; /* Menjaga container tetap berada di tengah */
+        }
+    
+        .cancelation-terms {
+            margin-bottom: 2rem; /* Menambahkan margin bawah */
+        }
+    }
+    
+    </style>
 </html>

@@ -4,290 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css utk header n footer -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMARE+L/E5FEvStPhvHecX3EmPtOg4bX43/QX0y" crossorigin="anonymous">
     <title>Hubungi Kami</title>
 </head>
-<!-- css utk header n footer -->
-<link rel="stylesheet" href="css/style.css">
-<!-- box icons -->
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMARE+L/E5FEvStPhvHecX3EmPtOg4bX43/QX0y" crossorigin="anonymous">
-
-<style> 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-}
-
-body {
-    font-family: 'Poppins', serif;
-    color: var(--color-black);
-    background: white;
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    max-width: 550px;
-    margin: auto;
-    margin-top: 5rem;
-}
-
-.heading,
-.sub-heading {
-    margin-bottom: .5rem;
-    font-weight: bold;
-}
-
-.heading {
-    font-size: 2.5rem;
-}
-
-.sub-heading {
-    text-align: left;
-}
-
-.contactForm {
-    display: grid;
-    gap: 3em;
-}
-
-form {
-    width: 100%;
-    margin-top: 3em;
-}
-
-.input {
-    margin-top: 0.5rem;
-    width: 95%;
-    max-width: 700px;
-    border: none;
-    font-size: .9rem;
-    padding: 1em;
-    outline: none;
-    background-color: var(--formBg);
-    color: var(--paraColor);
-    border-radius: 10px;
-    border: 1px solid var(--color-primary);
-    margin-bottom: 1em;
-}
-
-.input:focus {
-    border: 1px solid var(--color-primary);
-}
-
-.input::placeholder {
-    text-transform: capitalize;
-}
-
-.submit {
-    background: var(--color-primary);
-    border: 2px solid var(--color-primary);
-    font-weight: 600;
-    cursor: pointer;
-    width: 100%;
-}
-
-.map-container {
-    margin-top: 3rem;
-    position: relative;
-    width: 100%;
-    height: 500px;
-    margin-left: 5%;
-}
-
-.map-container h2 {
-    text-align: left;
-}
-
-.map {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 90%;
-    height: 90%;
-}
-
-.map iframe {
-    width: 100%;
-    height: 100%;
-}
-
-.contactMethod {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2em;
-    text-align: left;
-    margin-bottom: 2.5rem;
-}
-
-.method {
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.contactIcon {
-    font-size: 2.5rem;
-    color: var(--color-primary);
-    width: 70px;
-}
-
-/* Definisi animasi fadeInUp yang lebih halus */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px); /* Awal animasi dari posisi lebih rendah */
-    }
-    60% {
-        opacity: 0.7; /* Menambah opacity secara bertahap */
-        transform: translateY(-10px); /* Posisi lebih tinggi sebelum mencapai akhir */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Posisi akhir pada tempat semula */
-    }
-}
-
-/* Menambahkan animasi ke elemen */
-section,
-.contactForm,
-form,
-.input,
-.submit,
-.map-container,
-.map,
-.contactMethod,
-.method,
-.contactIcon {
-    animation: fadeInUp 1s ease-out; /* Durasi animasi 1 detik dengan easing halus */
-    animation-fill-mode: both; /* Memastikan animasi tetap pada status akhir setelah selesai */
-}
-
-/* Delay animasi untuk elemen tertentu */
-section {
-    animation-delay: 0s; /* Tanpa delay */
-}
-
-.contactForm {
-    animation-delay: 0.2s;
-}
-
-form {
-    animation-delay: 0.4s;
-}
-
-.input {
-    animation-delay: 0.6s;
-}
-
-.submit {
-    animation-delay: 0.8s;
-}
-
-.map-container {
-    animation-delay: 1s;
-}
-
-.map {
-    animation-delay: 1.2s;
-}
-
-.contactMethod {
-    animation-delay: 1.4s;
-}
-
-.method {
-    animation-delay: 1.6s;
-}
-
-.contactIcon {
-    animation-delay: 1.8s;
-}
-
-
-@media screen and (min-width:800px) {
-    section{
-        max-width: 1100px;
-    }
-    
-    .contactForm{
-        grid-template-columns: 1fr 1fr;
-    }   
-
-    .contactMethod{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
-
-/* Untuk layar kecil seperti smartphone */
-@media (max-width: 768px) {
-    section {
-        max-width: 90%;
-        margin-top: 5rem;
-    }
-
-    .heading {
-        font-size: 1.8rem;
-    }
-
-    .sub-heading {
-        font-size: 1.2rem;
-    }
-
-    .contactForm {
-        gap: 2em;
-    }
-
-    .input {
-        width: 100%;
-        font-size: 0.8rem;
-    }
-
-    .submit {
-        font-size: 0.8rem;
-        padding: 10px 0;
-    }
-
-    .map-container {
-        height: 300px; /* Menyesuaikan tinggi peta untuk layar kecil */
-    }
-}
-
-/* Untuk layar tablet */
-@media (max-width: 1024px) {
-    section {
-        max-width: 80%;
-    }
-
-    .heading {
-        font-size: 2rem;
-    }
-
-    .sub-heading {
-        font-size: 1.4rem;
-    }
-
-    .input {
-        font-size: 0.85rem;
-    }
-
-    .submit {
-        font-size: 0.85rem;
-        padding: 12px 0;
-    }
-
-    .map-container {
-        height: 400px; /* Menyesuaikan tinggi peta untuk tablet */
-    }
-}
-</style>
 <body>
     <!-- header -->
     <header>
@@ -298,9 +21,9 @@ form {
             <a href="" class="logo"><h3>Trilingga <span>Trans</span></h3></a>
             <!-- nav link -->
             <ul class="nav-link">
-                <li><a href="/home.html">Beranda</a></li>
+                <li><a href="/index.html">Beranda</a></li>
                 <li>
-                    <a href="/sewamobil.html">Sewa Mobil</a>
+                    <a href="#">Sewa Mobil</a>
                     <i class='bx bx-chevron-down chevron-icon'></i>
                     <div class="dropdown-content">
                         <a href="/avanza.html">Avanza</a>
@@ -309,11 +32,11 @@ form {
                     </div>
                 </li>
                 <li>
-                    <a href="/paketwisata.html">Paket Wisata</a>
+                    <a href="#">Paket Wisata</a>
                     <i class='bx bx-chevron-down chevron-icon'></i>
                     <div class="dropdown-content">
                         <a href="/bromo.html">Bromo</a>
-                        <a href="/bali.html">Bali</a>
+                        <a href="/baluran.html">Baluran</a>
                     </div>
                 </li>
                 <li><a href="/tentangkami.html">Tentang Kami</a></li>
@@ -327,6 +50,16 @@ form {
         </div>
     </header>
     <!-- end of header -->
+
+    <!-- icon wa -->
+    <div class="icon">
+        <a href="https://wa.me/+6283129646782?text=Halo!%20Saya%20tertarik%20untuk%20menyewa%20mobil%20dari%20rental%20Anda.%20Bisakah%20saya%20mendapatkan%20informasi%20lebih%20lanjut%20mengenai%20ketersediaan%20mobil%20dengan%20merk%20(Sebutkan merk mobil yang ingin anda sewa)%3F" target="_blank">
+            <div class="img-wa">
+                <img src="/images/iconwa.jpeg" alt="WhatsApp Icon">
+            </div>
+        </a>
+    </div>
+    <!-- end of icon wa -->
     
    <!-- hubungi kami --> 
    <section class="contact-form">
@@ -412,7 +145,7 @@ form {
             <div class="footer-section quick-links">
                 <h2><strong>Quick Links</strong></h2>
                 <ul class="footer-links">
-                    <li><a href="/home.html">Beranda</a></li>
+                    <li><a href="/index.html">Beranda</a></li>
                     <li><a href="/tentangkami.html">Tentang Kami</a></li>
                     <li><a href="/hubungikami.html">Hubungi Kami</a></li>
                 </ul>
@@ -429,7 +162,7 @@ form {
                 <h2><strong>Paket Wisata</strong></h2>
                 <ul class="footer-links">
                     <li><a href="/bromo.html">Bromo</a></li>
-                    <li><a href="/baluran.html">Baluran</a></li>
+                    <li><a href="/bali.html">Bali</a></li>
                 </ul>
             </div>
             <div class="footer-section find-us">
@@ -464,6 +197,282 @@ form {
     </div>
 </div>
 <!-- end of footer -->
+
+<!-- link js -->
 <script src="main.js"></script>
 </body>
+<!-- css -->
+<style> 
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+    }
+    
+    body {
+        font-family: 'Poppins', serif;
+        color: var(--color-black);
+        background: white;
+    }
+    
+    section {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        max-width: 550px;
+        margin: auto;
+        margin-top: 5rem;
+    }
+    
+    .heading,
+    .sub-heading {
+        margin-bottom: .5rem;
+        font-weight: bold;
+    }
+    
+    .heading {
+        font-size: 2.5rem;
+    }
+    
+    .sub-heading {
+        text-align: left;
+    }
+    
+    .contactForm {
+        display: grid;
+        gap: 3em;
+    }
+    
+    form {
+        width: 100%;
+        margin-top: 3em;
+    }
+    
+    .input {
+        margin-top: 0.5rem;
+        width: 95%;
+        max-width: 700px;
+        border: none;
+        font-size: .9rem;
+        padding: 1em;
+        outline: none;
+        background-color: var(--formBg);
+        color: var(--paraColor);
+        border-radius: 10px;
+        border: 1px solid var(--color-primary);
+        margin-bottom: 1em;
+    }
+    
+    .input:focus {
+        border: 1px solid var(--color-primary);
+    }
+    
+    .input::placeholder {
+        text-transform: capitalize;
+    }
+    
+    .submit {
+        background: var(--color-primary);
+        border: 2px solid var(--color-primary);
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    .map-container {
+        margin-top: 3rem;
+        position: relative;
+        width: 100%;
+        height: 500px;
+        margin-left: 5%;
+    }
+    
+    .map-container h2 {
+        text-align: left;
+    }
+    
+    .map {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 90%;
+        height: 90%;
+    }
+    
+    .map iframe {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .contactMethod {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+        text-align: left;
+        margin-bottom: 2.5rem;
+    }
+    
+    .method {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    
+    .contactIcon {
+        font-size: 2.5rem;
+        color: var(--color-primary);
+        width: 70px;
+    }
+    
+    /* animasi */
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(30px); /* Awal animasi dari posisi lebih rendah */
+        }
+        60% {
+            opacity: 0.7; /* Menambah opacity secara bertahap */
+            transform: translateY(-10px); /* Posisi lebih tinggi sebelum mencapai akhir */
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0); /* Posisi akhir pada tempat semula */
+        }
+    }
+
+    section,
+    .contactForm,
+    form,
+    .input,
+    .submit,
+    .map-container,
+    .map,
+    .contactMethod,
+    .method,
+    .contactIcon {
+        animation: fadeInUp 1s ease-out;
+        animation-fill-mode: both; 
+    }
+
+    section {
+        animation-delay: 0s; 
+    }
+    
+    .contactForm {
+        animation-delay: 0.2s;
+    }
+    
+    form {
+        animation-delay: 0.4s;
+    }
+    
+    .input {
+        animation-delay: 0.6s;
+    }
+    
+    .submit {
+        animation-delay: 0.8s;
+    }
+    
+    .map-container {
+        animation-delay: 1s;
+    }
+    
+    .map {
+        animation-delay: 1.2s;
+    }
+    
+    .contactMethod {
+        animation-delay: 1.4s;
+    }
+    
+    .method {
+        animation-delay: 1.6s;
+    }
+    
+    .contactIcon {
+        animation-delay: 1.8s;
+    }
+    
+    /* responsif */
+    @media screen and (min-width:800px) {
+        section{
+            max-width: 1100px;
+        }
+        
+        .contactForm{
+            grid-template-columns: 1fr 1fr;
+        }   
+    
+        .contactMethod{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    @media (max-width: 768px) {
+        section {
+            max-width: 90%;
+            margin-top: 5rem;
+        }
+    
+        .heading {
+            font-size: 1.8rem;
+        }
+    
+        .sub-heading {
+            font-size: 1.2rem;
+        }
+    
+        .contactForm {
+            gap: 2em;
+        }
+    
+        .input {
+            width: 100%;
+            font-size: 0.8rem;
+        }
+    
+        .submit {
+            font-size: 0.8rem;
+            padding: 10px 0;
+        }
+    
+        .map-container {
+            height: 300px; 
+        }
+    }
+
+    @media (max-width: 1024px) {
+        section {
+            max-width: 80%;
+        }
+    
+        .heading {
+            font-size: 2rem;
+        }
+    
+        .sub-heading {
+            font-size: 1.4rem;
+        }
+    
+        .input {
+            font-size: 0.85rem;
+        }
+    
+        .submit {
+            font-size: 0.85rem;
+            padding: 12px 0;
+        }
+    
+        .map-container {
+            height: 400px; 
+        }
+    }
+    </style>
+    <!-- end of css -->
 </html>

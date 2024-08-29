@@ -40,24 +40,24 @@ options.forEach(option =>{
     });
 });
 
-// Menambahkan event listener pada dropdown toggle
-const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+// // Menambahkan event listener pada dropdown toggle
+// const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
-dropdownToggles.forEach(toggle => {
-    toggle.addEventListener('click', function (e) {
-        e.preventDefault(); // Mencegah link berfungsi default
+// dropdownToggles.forEach(toggle => {
+//     toggle.addEventListener('click', function (e) {
+//         e.preventDefault(); // Mencegah link berfungsi default
 
-        // Dapatkan dropdown content terkait
-        const dropdownContent = this.nextElementSibling;
-        const chevronIcon = this.querySelector('.chevron-icon');
+//         // Dapatkan dropdown content terkait
+//         const dropdownContent = this.nextElementSibling;
+//         const chevronIcon = this.querySelector('.chevron-icon');
 
-        // Toggle class .show untuk menampilkan/menyembunyikan dropdown content
-        dropdownContent.classList.toggle('show');
+//         // Toggle class .show untuk menampilkan/menyembunyikan dropdown content
+//         dropdownContent.classList.toggle('show');
 
-        // Toggle class .rotated untuk mengatur rotasi chevron
-        chevronIcon.classList.toggle('rotated');
-    });
-});
+//         // Toggle class .rotated untuk mengatur rotasi chevron
+//         chevronIcon.classList.toggle('rotated');
+//     });
+// });
 
 
 // var swiper = new Swiper(".mySwiper", {

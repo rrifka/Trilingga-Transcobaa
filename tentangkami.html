@@ -10,161 +10,6 @@
     <!---->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title>Tentang Kami</title>
-    <style>
-        /* Definisi animasi fadeInUp yang lebih halus */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px); /* Awal animasi dari posisi lebih rendah */
-    }
-    60% {
-        opacity: 0.7; /* Menambah opacity secara bertahap */
-        transform: translateY(-10px); /* Posisi lebih tinggi sebelum mencapai akhir */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Posisi akhir pada tempat semula */
-    }
-}
-
-/* Kontainer umum untuk .about-us */
-.about-us {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    margin-top: 4rem; /* Menambahkan margin-top untuk mendorong bagian ke bawah */
-}
-
-/* Styling dan animasi untuk heading */
-.about-us-heading {
-    opacity: 0;
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-    animation: fadeInUp 1s ease-out;
-    animation-fill-mode: both; /* Memastikan animasi tetap pada status akhir setelah selesai */
-    animation-delay: 0s; /* Delay animasi untuk heading */
-}
-
-/* Styling dan animasi untuk elemen lainnya */
-.about-us-intro,
-.about-us-text,
-.about-us-section,
-.about-us-list {
-    opacity: 0;
-    animation: fadeInUp 1s ease-out; /* Terapkan animasi fadeInUp */
-    animation-fill-mode: both; /* Memastikan animasi tetap pada status akhir setelah selesai */
-}
-
-.about-us-intro {
-    animation-delay: 0.2s; /* Delay animasi untuk intro */
-}
-
-.about-us-text {
-    animation-delay: 0.4s; /* Delay animasi untuk teks */
-}
-
-.about-us-section {
-    animation-delay: 0.6s; /* Delay animasi untuk section */
-}
-
-.about-us-list {
-    animation-delay: 0.8s; /* Delay animasi untuk daftar */
-}
-
-/* Styling untuk span di dalam .about-us-intro dan .about-us-text */
-.about-us-intro span,
-.about-us-text span {
-    font-weight: bold;
-}
-
-.about-us-intro,
-.about-us-text {
-    font-size: 1rem; /* Ukuran font untuk intro dan teks */
-    line-height: 1.6;
-    margin-top: 1rem;
-}
-
-.about-us-section {
-    font-size: 1.2rem; /* Ukuran font untuk section */
-    margin-top: 2rem; /* Margin atas untuk section */
-}
-
-.about-us-list {
-    margin-top: 2rem; /* Margin atas untuk daftar */
-    margin-bottom: 3rem; /* Margin bawah untuk daftar */
-    padding-left: 1.5rem; /* Padding untuk bullet points */
-}
-
-.about-us-list li {
-    font-size: 1rem; /* Ukuran font untuk item daftar */
-    margin-bottom: 0.5rem;
-    list-style-type: disc; /* Daftar berbulat */
-    list-style-position: outside; /* Bullet di luar kotak teks */
-    padding-left: 1.5rem; /* Padding untuk penyesuaian teks */
-}
-
-/* Media Queries untuk Responsive Design */
-
-/* Untuk layar kecil seperti smartphone */
-@media (max-width: 768px) {
-    .about-us {
-        padding: 15px;
-        margin-top: 2rem; /* Mengurangi margin-top untuk layar kecil */
-    }
-
-    .about-us-heading {
-        font-size: 1.8rem; /* Menyesuaikan ukuran font heading */
-    }
-
-    .about-us-intro,
-    .about-us-text {
-        font-size: 0.9rem; /* Menyesuaikan ukuran font untuk intro dan teks */
-    }
-
-    .about-us-section {
-        font-size: 1rem; /* Menyesuaikan ukuran font untuk section */
-    }
-
-    .about-us-list {
-        padding-left: 1rem; /* Mengurangi padding untuk layar kecil */
-    }
-
-    .about-us-list li {
-        font-size: 0.9rem; /* Menyesuaikan ukuran font untuk item daftar */
-    }
-}
-
-/* Untuk layar tablet */
-@media (max-width: 1024px) {
-    .about-us {
-        padding: 20px;
-        margin-top: 3rem; /* Menyesuaikan margin-top untuk tablet */
-    }
-
-    .about-us-heading {
-        font-size: 2rem; /* Menyesuaikan ukuran font heading */
-    }
-
-    .about-us-intro,
-    .about-us-text {
-        font-size: 0.95rem; /* Menyesuaikan ukuran font untuk intro dan teks */
-    }
-
-    .about-us-section {
-        font-size: 1.1rem; /* Menyesuaikan ukuran font untuk section */
-    }
-
-    .about-us-list {
-        padding-left: 1.25rem; /* Mengurangi padding untuk tablet */
-    }
-
-    .about-us-list li {
-        font-size: 0.95rem; /* Menyesuaikan ukuran font untuk item daftar */
-    }
-}
-
-    </style>
 </head>
 <body>
     <!-- header -->
@@ -176,26 +21,26 @@
             <a href="" class="logo"><h3>Trilingga <span>Trans</span></h3></a>
             <!-- nav link -->
             <ul class="nav-link">
-                <li><a href="/home.html">Beranda</a></li>
+                <li><a href="/index.html">Beranda</a></li>
                 <li>
-                    <a href="/sewamobil.html">Sewa Mobil</a>
+                    <a href="#">Sewa Mobil</a>
                     <i class='bx bx-chevron-down chevron-icon'></i>
                     <div class="dropdown-content">
-                        <a href="/avanza.html">Avanza</a>
-                        <a href="/innova.html">Innova</a>
-                        <a href="/fortuner.html">Fortuner</a>
+                        <a href="/sewa-mobil/avanza.html">Avanza</a>
+                        <a href="sewa-mobil/innova.html">Innova</a>
+                        <a href="sewa-mobil/fortuner.html">Fortuner</a>
                     </div>
                 </li>
                 <li>
-                    <a href="/paketwisata.html">Paket Wisata</a>
+                    <a href="#">Paket Wisata</a>
                     <i class='bx bx-chevron-down chevron-icon'></i>
                     <div class="dropdown-content">
-                        <a href="/bromo.html">Bromo</a>
-                        <a href="/baluran.html">Baluran</a>
+                        <a href="/paket-wisata/bromo.html">Bromo</a>
+                        <a href="/paket-wisata/baluran.html">Baluran</a>
                     </div>
                 </li>
-                <li><a href="/tentangkami.html" class="active">Tentang Kami</a></li>
-                <li><a href="/hubungikami.html">Hubungi Kami</a></li>
+                <li><a href="/component/tentangkami.html" class="active">Tentang Kami</a></li>
+                <li><a href="/component/hubungikami.html">Hubungi Kami</a></li>
             </ul>
             <ul class="social-link">
                 <li><a href="" style="--i:1;"><i class="fab fa-facebook"></i></a></li>
@@ -210,7 +55,7 @@
     <div class="icon">
         <a href="https://wa.me/+6283129646782?text=Halo!%20Saya%20tertarik%20untuk%20menyewa%20mobil%20dari%20rental%20Anda.%20Bisakah%20saya%20mendapatkan%20informasi%20lebih%20lanjut%20mengenai%20ketersediaan%20mobil%20dengan%20merk%20(Sebutkan merk mobil yang ingin anda sewa)%3F" target="_blank">
             <div class="img-wa">
-                <img src="images/iconwa.jpeg" alt="WhatsApp Icon">
+                <img src="/images/iconwa.jpeg" alt="WhatsApp Icon">
             </div>
         </a>
     </div>
@@ -257,7 +102,7 @@
                 <div class="footer-section quick-links">
                     <h2><strong>Quick Links</strong></h2>
                     <ul class="footer-links">
-                        <li><a href="/home.html">Beranda</a></li>
+                        <li><a href="/index.html">Beranda</a></li>
                         <li><a href="/tentangkami.html">Tentang Kami</a></li>
                         <li><a href="/hubungikami.html">Hubungi Kami</a></li>
                     </ul>
@@ -274,7 +119,7 @@
                     <h2><strong>Paket Wisata</strong></h2>
                     <ul class="footer-links">
                         <li><a href="/bromo.html">Bromo</a></li>
-                        <li><a href="/bali.html">Bali</a></li>
+                        <li><a href="/baluran.html">Baluran</a></li>
                     </ul>
                 </div>
                 <div class="footer-section find-us">
@@ -310,7 +155,157 @@
     </div>
     <!-- end of footer -->
 
-
+    <!-- link js -->
     <script src="main.js"></script>
 </body>
+
+<!-- css -->
+<style>
+.about-us {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 4rem; /* Menambahkan margin-top untuk mendorong bagian ke bawah */
+}
+
+.about-us-heading {
+    opacity: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    animation: fadeInUp 1s ease-out;
+    animation-fill-mode: both; /* Memastikan animasi tetap pada status akhir setelah selesai */
+    animation-delay: 0s; /* Delay animasi untuk heading */
+}
+
+.about-us-intro,
+.about-us-text,
+.about-us-section,
+.about-us-list {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out; /* Terapkan animasi fadeInUp */
+    animation-fill-mode: both; /* Memastikan animasi tetap pada status akhir setelah selesai */
+}
+
+.about-us-intro {
+    animation-delay: 0.2s; /* Delay animasi untuk intro */
+}
+
+.about-us-text {
+    animation-delay: 0.4s; /* Delay animasi untuk teks */
+}
+
+.about-us-section {
+    animation-delay: 0.6s; /* Delay animasi untuk section */
+}
+
+.about-us-list {
+    animation-delay: 0.8s; /* Delay animasi untuk daftar */
+}
+
+.about-us-intro span,
+.about-us-text span {
+    font-weight: bold;
+}
+
+.about-us-intro,
+.about-us-text {
+    font-size: 1rem; /* Ukuran font untuk intro dan teks */
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.about-us-section {
+    font-size: 1.2rem; /* Ukuran font untuk section */
+    margin-top: 2rem; /* Margin atas untuk section */
+}
+
+.about-us-list {
+    margin-top: 2rem; /* Margin atas untuk daftar */
+    margin-bottom: 3rem; /* Margin bawah untuk daftar */
+    padding-left: 1.5rem; /* Padding untuk bullet points */
+}
+
+.about-us-list li {
+    font-size: 1rem; /* Ukuran font untuk item daftar */
+    margin-bottom: 0.5rem;
+    list-style-type: disc; /* Daftar berbulat */
+    list-style-position: outside; /* Bullet di luar kotak teks */
+    padding-left: 1.5rem; /* Padding untuk penyesuaian teks */
+}
+
+/* animasi */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Awal animasi dari posisi lebih rendah */
+    }
+    60% {
+        opacity: 0.7; /* Menambah opacity secara bertahap */
+        transform: translateY(-10px); /* Posisi lebih tinggi sebelum mencapai akhir */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Posisi akhir pada tempat semula */
+    }
+}
+
+/* responsif */
+@media (max-width: 768px) {
+    .about-us {
+        padding: 15px;
+        margin-top: 2rem; /* Mengurangi margin-top untuk layar kecil */
+    }
+
+    .about-us-heading {
+        font-size: 1.8rem; /* Menyesuaikan ukuran font heading */
+    }
+
+    .about-us-intro,
+    .about-us-text {
+        font-size: 0.9rem; /* Menyesuaikan ukuran font untuk intro dan teks */
+    }
+
+    .about-us-section {
+        font-size: 1rem; /* Menyesuaikan ukuran font untuk section */
+    }
+
+    .about-us-list {
+        padding-left: 1rem; /* Mengurangi padding untuk layar kecil */
+    }
+
+    .about-us-list li {
+        font-size: 0.9rem; /* Menyesuaikan ukuran font untuk item daftar */
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-us {
+        padding: 20px;
+        margin-top: 3rem; /* Menyesuaikan margin-top untuk tablet */
+    }
+
+    .about-us-heading {
+        font-size: 2rem; /* Menyesuaikan ukuran font heading */
+    }
+
+    .about-us-intro,
+    .about-us-text {
+        font-size: 0.95rem; /* Menyesuaikan ukuran font untuk intro dan teks */
+    }
+
+    .about-us-section {
+        font-size: 1.1rem; /* Menyesuaikan ukuran font untuk section */
+    }
+
+    .about-us-list {
+        padding-left: 1.25rem; /* Mengurangi padding untuk tablet */
+    }
+
+    .about-us-list li {
+        font-size: 0.95rem; /* Menyesuaikan ukuran font untuk item daftar */
+    }
+}
+</style>
+<!-- end of css -->
 </html>

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bromo</title>
     <!-- css -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- box icons -->
@@ -12,375 +11,7 @@
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    box-sizing: border-box;
-}
-
-:root {
-    --color-primary: #1743e3;
-    --color-white: #eaeaea;
-    --color-dark: #333;
-    --color-black: #222;
-}
-
-body {
-    font-family: 'Poppins', serif;
-    color: var(--color-black);
-    background: white;
-}
-
-.wisata {
-    text-align: center;
-    margin: 5rem auto;
-}
-
-.wisata h1 {
-    font-size: 2.5rem;
-    color: var(--color-black);
-    margin-bottom: 0.8rem;
-}
-
-.wisata-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -1rem;
-}
-
-.wisata-box {
-    display: flex;
-    flex-direction: row;
-    max-width: 1200px;
-    margin: auto;
-    gap: 2rem;
-    justify-content: center;
-    align-items: stretch;
-}
-
-.img-bromo, .wisata-details {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.img-bromo {
-    border: 1px solid black;
-    border-radius: 3px;
-    padding: 20px;
-}
-
-.img-bromo img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 3px;
-}
-
-.wisata-details {
-    padding: 2rem;
-    border: 1px solid black;
-    border-radius: 3px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.wisata-details h1 {
-    font-size: 2rem;
-    color: var(--color-black);
-    margin-bottom: 0.5rem;
-}
-
-.wisata-details h2 {
-    color: var(--color-primary);
-    font-size: 1.8rem;
-    margin: 0;
-}
-
-.wisata-details h2 span {
-    font-size: 1.3rem;
-    color: #333;
-    font-weight: 400;
-}
-
-.wisata-details p {
-    margin-top: 1rem;
-    line-height: 1.6;
-    text-align: center;
-}
-
-.btn-pesan {
-    margin-top: 1rem;
-    padding: 12px 80px;
-    background-color: var(--color-primary);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    align-items: center;
-    transition: 0.3s ease-in-out;
-}
-
-.btn-pesan:hover {
-    transform: scale(1.05);
-}
-
-.important-warning {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border-radius: 3px;
-    background-color: rgb(212, 7, 7);
-    color: var(--color-black);
-    text-align: center;
-}
-
-.important-warning h1 {
-    font-size: 1.8rem;
-    color: white;
-    margin-bottom: 1rem;
-}
-
-.important-warning p {
-    color: white;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-.terms-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* Adjust size ratio here */
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.schedule {
-    padding: 2rem;
-    border-radius: 3px;
-    border: 1px solid black;
-}
-
-.schedule h1 {
-    font-size: 1.8rem;
-    color: var(--color-black);
-    margin-bottom: 1rem;
-}
-
-.schedule ul {
-    list-style-position: inside;
-    padding-left: 20px;
-    margin: 0;
-}
-
-.schedule li {
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
-    list-style-type: disc;
-}
-
-.include {
-    padding: 2rem;
-    border-radius: 3px;
-    border: 1px solid black;
-}
-
-.include h1 {
-    font-size: 1.8rem;
-    color: var(--color-black);
-    margin-bottom: 1rem;
-}
-
-.include p {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
-}
-
-.include p::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--color-dark);
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-
-/* animasi */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px); /* Awal animasi dari posisi lebih rendah */
-    }
-    60% {
-        opacity: 0.7; /* Menambah opacity secara bertahap */
-        transform: translateY(-10px); /* Posisi lebih tinggi sebelum mencapai akhir */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Posisi akhir pada tempat semula */
-    }
-}
-
-.wisata,
-.wisata-box,
-.schedule,
-.include,
-.important-warning {
-    animation: fadeInUp 1s ease-out; /* Durasi animasi 1 detik dengan easing halus */
-    animation-fill-mode: both; /* Memastikan animasi tetap pada status akhir setelah selesai */
-}
-.wisata {
-    animation-delay: 0.2s;
-}
-
-.wisata-box {
-    animation-delay: 0.4s;
-}
-
-.schedule {
-    animation-delay: 0.6s;
-}
-
-.include {
-    animation-delay: 0.8s;
-}
-
-.important-warning {
-    animation-delay: 1s;
-}
-
-
-/* responsif */
-@media (max-width: 768px) {
-    .wisata {
-        margin-bottom: 3rem; /* Menambahkan margin bawah */
-    }
-
-    .terms-container {
-        margin-bottom: 3rem; /* Menambahkan margin bawah */
-    }
-
-    .wisata-box {
-        flex-direction: column;
-        max-width: 90%; /* Mengurangi lebar maksimum kotak */
-        margin: 0 auto; /* Menjaga kotak tetap berada di tengah */
-    }
-
-    .img-bromo {
-        width: 100%;
-        padding: 10px; /* Mengurangi padding gambar */
-    }
-
-    .wisata-details {
-        width: 100%;
-        padding: 1rem;
-    }
-
-    .btn-pesan {
-        padding: 12px 30px; /* Sesuaikan ukuran tombol untuk layar kecil */
-    }
-
-    .important-warning {
-        padding: 1rem;
-        font-size: 0.9rem;
-    }
-
-    .terms-container {
-        flex-direction: column;
-        max-width: 90%; /* Mengurangi lebar maksimum container */
-        margin: 0 auto; /* Menjaga container tetap berada di tengah */
-    }
-
-    .schedule {
-        padding: 1rem;
-        margin-top: 2rem;
-    }
-
-    .include {
-        padding: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    .schedule ul, .include p {
-        padding-left: 10px;
-    }
-
-    .schedule li {
-        font-size: 0.9rem;
-    }
-
-    .include p::before {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 1024px) {
-    .wisata {
-        margin-bottom: 3rem; /* Menambahkan margin bawah */
-    }
-
-    .terms-container {
-        margin-bottom: 3rem; /* Menambahkan margin bawah */
-    }
-
-    .wisata-box {
-        flex-direction: column;
-        max-width: 95%; /* Mengurangi lebar maksimum kotak */
-        margin: 0 auto; /* Menjaga kotak tetap berada di tengah */
-    }
-
-    .img-bromo {
-        width: 100%;
-        padding: 15px; /* Mengurangi padding gambar */
-    }
-
-    .wisata-details {
-        width: 100%;
-        padding: 1.5rem;
-    }
-
-    .btn-pesan {
-        padding: 12px 50px; /* Sesuaikan ukuran tombol untuk layar tablet */
-    }
-
-    .important-warning {
-        padding: 1.5rem;
-    }
-
-    .terms-container {
-        grid-template-columns: 1fr; /* Mengubah layout grid menjadi kolom tunggal */
-        max-width: 95%; /* Mengurangi lebar maksimum container */
-        margin: 0 auto; /* Menjaga container tetap berada di tengah */
-    }
-
-    .schedule {
-        padding: 1rem;
-        margin-top: 2rem;
-    }
-
-    .include {
-        padding: 1rem;
-        margin-bottom: 2rem;
-    }
-}
-</style>
-
+    <title>Bromo</title>
 </head>
 <body>
     <!-- header -->
@@ -392,26 +23,26 @@ body {
             <a href="" class="logo"><h3>Trilingga <span>Trans</span></h3></a>
             <!-- nav link -->
             <ul class="nav-link">
-                <li><a href="/home.html">Beranda</a></li>
+                <li><a href="/index.html">Beranda</a></li>
                 <li>
-                    <a href="/sewamobil.html">Sewa Mobil</a>
+                    <a href="#">Sewa Mobil</a>
                     <i class='bx bx-chevron-down chevron-icon'></i>
                     <div class="dropdown-content">
-                        <a href="/avanza.html">Avanza</a>
-                        <a href="/innova.html">Innova</a>
-                        <a href="/fortuner.html">Fortuner</a>
+                        <a href="/sewa-mobil/avanza.html">Avanza</a>
+                        <a href="/sewa-mobil/innova.html">Innova</a>
+                        <a href="/sewa-mobil/fortuner.html">Fortuner</a>
                     </div>
                 </li>
                 <li>
-                    <a href="" class="active">Paket Wisata</a>
+                    <a href="#" class="active">Paket Wisata</a>
                     <i class='bx bx-chevron-down chevron-icon'></i>
                     <div class="dropdown-content">
-                        <a href="/bromo.html">Bromo</a>
-                        <a href="/baluran.html">Baluran</a>
+                        <a href="/paket-wisata/bromo.html">Bromo</a>
+                        <a href="/paket-wisata/baluran.html">Baluran</a>
                     </div>
                 </li>
-                <li><a href="/tentangkami.html">Tentang Kami</a></li>
-                <li><a href="/hubungikami.html">Hubungi Kami</a></li>
+                <li><a href="/component/tentangkami.html">Tentang Kami</a></li>
+                <li><a href="/component/hubungikami.html">Hubungi Kami</a></li>
             </ul>
             <ul class="social-link">
                 <li><a href="" style="--i:1;"><i class="fab fa-facebook"></i></a></li>
@@ -426,7 +57,7 @@ body {
     <div class="icon">
         <a href="https://wa.me/+6283129646782?text=Halo!%20Saya%20tertarik%20untuk%20menyewa%20mobil%20dari%20rental%20Anda.%20Bisakah%20saya%20mendapatkan%20informasi%20lebih%20lanjut%20mengenai%20ketersediaan%20mobil%20dengan%20merk%20(Sebutkan merk mobil yang ingin anda sewa)%3F" target="_blank">
             <div class="img-wa">
-                <img src="images/iconwa.jpeg" alt="WhatsApp Icon">
+                <img src="/images/iconwa.jpeg" alt="WhatsApp Icon">
             </div>
         </a>
     </div>
@@ -440,7 +71,7 @@ body {
     <div class="wisata-container">
         <div class="wisata-box">
             <div class="img-bromo">
-                <img src="images/bromo.jpeg" alt="Toyota Avanza">
+                <img src="/images/bromo.jpeg" alt="Bromo">
             </div>
             <div class="wisata-details">
                 <h1>Bromo</h1>
@@ -498,8 +129,8 @@ body {
                 <div class="footer-section quick-links">
                     <h2><strong>Quick Links</strong></h2>
                     <ul class="footer-links">
-                        <li><a href="/home.html">Beranda</a></li>
-                        <li><a href="/tentangkami.html">Tentang Kami</a></li>
+                        <li><a href="/index.html">Beranda</a></li>
+                        <li><a href="tentangkami.html">Tentang Kami</a></li>
                         <li><a href="/hubungikami.html">Hubungi Kami</a></li>
                     </ul>
                 </div>
@@ -515,7 +146,7 @@ body {
                     <h2><strong>Paket Wisata</strong></h2>
                     <ul class="footer-links">
                         <li><a href="/bromo.html">Bromo</a></li>
-                        <li><a href="/bali.html">Bali</a></li>
+                        <li><a href="/baluran.html">Baluran</a></li>
                     </ul>
                 </div>
                 <div class="footer-section find-us">
@@ -554,4 +185,374 @@ body {
     <!-- link js -->
     <script src="main.js"></script>
 </body>
+
+<!-- css -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+    
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+    
+    :root {
+        --color-primary: #1743e3;
+        --color-white: #eaeaea;
+        --color-dark: #333;
+        --color-black: #222;
+    }
+    
+    body {
+        font-family: 'Poppins', serif;
+        color: var(--color-black);
+        background: white;
+    }
+    
+    .wisata {
+        text-align: center;
+        margin: 5rem auto;
+    }
+    
+    .wisata h1 {
+        font-size: 2.5rem;
+        color: var(--color-black);
+        margin-bottom: 0.8rem;
+    }
+    
+    .wisata-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -1rem;
+    }
+    
+    .wisata-box {
+        display: flex;
+        flex-direction: row;
+        max-width: 1200px;
+        margin: auto;
+        gap: 2rem;
+        justify-content: center;
+        align-items: stretch;
+    }
+    
+    .img-bromo, .wisata-details {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .img-bromo {
+        border: 1px solid black;
+        border-radius: 3px;
+        padding: 20px;
+    }
+    
+    .img-bromo img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 3px;
+    }
+    
+    .wisata-details {
+        padding: 2rem;
+        border: 1px solid black;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .wisata-details h1 {
+        font-size: 2rem;
+        color: var(--color-black);
+        margin-bottom: 0.5rem;
+    }
+    
+    .wisata-details h2 {
+        color: var(--color-primary);
+        font-size: 1.8rem;
+        margin: 0;
+    }
+    
+    .wisata-details h2 span {
+        font-size: 1.3rem;
+        color: #333;
+        font-weight: 400;
+    }
+    
+    .wisata-details p {
+        margin-top: 1rem;
+        line-height: 1.6;
+        text-align: center;
+    }
+    
+    .btn-pesan {
+        margin-top: 1rem;
+        padding: 12px 80px;
+        background-color: var(--color-primary);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        align-items: center;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .btn-pesan:hover {
+        transform: scale(1.05);
+    }
+    
+    .important-warning {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 3px;
+        background-color: rgb(212, 7, 7);
+        color: var(--color-black);
+        text-align: center;
+    }
+    
+    .important-warning h1 {
+        font-size: 1.8rem;
+        color: white;
+        margin-bottom: 1rem;
+    }
+    
+    .important-warning p {
+        color: white;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+    
+    .terms-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* Adjust size ratio here */
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .schedule {
+        padding: 2rem;
+        border-radius: 3px;
+        border: 1px solid black;
+    }
+    
+    .schedule h1 {
+        font-size: 1.8rem;
+        color: var(--color-black);
+        margin-bottom: 1rem;
+    }
+    
+    .schedule ul {
+        list-style-position: inside;
+        padding-left: 20px;
+        margin: 0;
+    }
+    
+    .schedule li {
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+        list-style-type: disc;
+    }
+    
+    .include {
+        padding: 2rem;
+        border-radius: 3px;
+        border: 1px solid black;
+    }
+    
+    .include h1 {
+        font-size: 1.8rem;
+        color: var(--color-black);
+        margin-bottom: 1rem;
+    }
+    
+    .include p {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+    }
+    
+    .include p::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: var(--color-dark);
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+    
+    
+    /* animasi */
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(30px); /* Awal animasi dari posisi lebih rendah */
+        }
+        60% {
+            opacity: 0.7; /* Menambah opacity secara bertahap */
+            transform: translateY(-10px); /* Posisi lebih tinggi sebelum mencapai akhir */
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0); /* Posisi akhir pada tempat semula */
+        }
+    }
+    
+    .wisata,
+    .wisata-box,
+    .schedule,
+    .include,
+    .important-warning {
+        animation: fadeInUp 1s ease-out; /* Durasi animasi 1 detik dengan easing halus */
+        animation-fill-mode: both; /* Memastikan animasi tetap pada status akhir setelah selesai */
+    }
+    .wisata {
+        animation-delay: 0.2s;
+    }
+    
+    .wisata-box {
+        animation-delay: 0.4s;
+    }
+    
+    .schedule {
+        animation-delay: 0.6s;
+    }
+    
+    .include {
+        animation-delay: 0.8s;
+    }
+    
+    .important-warning {
+        animation-delay: 1s;
+    }
+    
+    
+    /* responsif */
+    @media (max-width: 768px) {
+        .wisata {
+            margin-bottom: 3rem; /* Menambahkan margin bawah */
+        }
+    
+        .terms-container {
+            margin-bottom: 3rem; /* Menambahkan margin bawah */
+        }
+    
+        .wisata-box {
+            flex-direction: column;
+            max-width: 90%; /* Mengurangi lebar maksimum kotak */
+            margin: 0 auto; /* Menjaga kotak tetap berada di tengah */
+        }
+    
+        .img-bromo {
+            width: 100%;
+            padding: 10px; /* Mengurangi padding gambar */
+        }
+    
+        .wisata-details {
+            width: 100%;
+            padding: 1rem;
+        }
+    
+        .btn-pesan {
+            padding: 12px 30px; /* Sesuaikan ukuran tombol untuk layar kecil */
+        }
+    
+        .important-warning {
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+    
+        .terms-container {
+            flex-direction: column;
+            max-width: 90%; /* Mengurangi lebar maksimum container */
+            margin: 0 auto; /* Menjaga container tetap berada di tengah */
+        }
+    
+        .schedule {
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    
+        .include {
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+    
+        .schedule ul, .include p {
+            padding-left: 10px;
+        }
+    
+        .schedule li {
+            font-size: 0.9rem;
+        }
+    
+        .include p::before {
+            font-size: 1rem;
+        }
+    }
+    
+    @media (max-width: 1024px) {
+        .wisata {
+            margin-bottom: 3rem; /* Menambahkan margin bawah */
+        }
+    
+        .terms-container {
+            margin-bottom: 3rem; /* Menambahkan margin bawah */
+        }
+    
+        .wisata-box {
+            flex-direction: column;
+            max-width: 95%; /* Mengurangi lebar maksimum kotak */
+            margin: 0 auto; /* Menjaga kotak tetap berada di tengah */
+        }
+    
+        .img-bromo {
+            width: 100%;
+            padding: 15px; /* Mengurangi padding gambar */
+        }
+    
+        .wisata-details {
+            width: 100%;
+            padding: 1.5rem;
+        }
+    
+        .btn-pesan {
+            padding: 12px 50px; /* Sesuaikan ukuran tombol untuk layar tablet */
+        }
+    
+        .important-warning {
+            padding: 1.5rem;
+        }
+    
+        .terms-container {
+            grid-template-columns: 1fr; /* Mengubah layout grid menjadi kolom tunggal */
+            max-width: 95%; /* Mengurangi lebar maksimum container */
+            margin: 0 auto; /* Menjaga container tetap berada di tengah */
+        }
+    
+        .schedule {
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    
+        .include {
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+    }
+    </style>
+    <!-- end of css -->
 </html>
